@@ -12,4 +12,4 @@ runs:
   steps:
     - name: echo command
       shell: bash
-      run: echo hello world ${{ env.region }} !!
+      run: echo hello world ${{ inputs.region }} !!
