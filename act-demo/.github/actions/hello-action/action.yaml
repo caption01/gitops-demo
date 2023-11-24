@@ -1,0 +1,15 @@
+name: Hello action
+description: this is only echo cmd
+
+inputs:
+  region:
+    description: aws region
+    required: true
+    default: ap-south-1a
+
+runs:
+  using: composite
+  steps:
+    - name: echo command
+      shell: bash
+      run: echo hello world ${{ env.region }} !!
